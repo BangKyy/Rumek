@@ -1,0 +1,277 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: var(--quicksands); */
+    font-optical-sizing: auto;
+}
+
+/* VARIABLE */
+:root{
+    /* background colors */
+    --main-bg-color: #eaeaea;
+    --sec-bg-color: #FAFCFF;
+    --bg-dropdown: #F4FAFF; /*#f2f2f8*/
+
+    /* fonts family */
+    --poppins: "Poppins", sans-serif;
+    --quicksands: "Quicksand", sans-serif;
+
+    /* font colors */
+    --color-1: #464C5A;
+    --color-2: #303030;
+    --color-3: #404756;
+    --color-4: #D9D9D9;
+    --color-5: #FCFCFC;
+    --color-6: #BABABA;
+    --color-7: #DEDEDE;
+    --color-8: #636363;
+    --color-9: #235699;
+
+    --color-gradient-black-left-side: hsla(222, 13%, 31%, 1);
+    --color-gradient-black-2: rgba(0, 0, 0, 0.6);
+    --color-gradient-black-3: rgba(0, 0, 0, 0.4);
+    --color-gradient-black-4: rgba(0, 0, 0, 0.2);
+
+    --color-gradient-white-1: rgba(255, 255, 255, 0.9);
+    --color-gradient-white-2: rgba(255, 255, 255, 0.8);
+
+    /* fonts bold */
+    --bold-1: 300;
+    --bold-2: 400;
+    --bold-3: 500;
+    --bold-4: 600; 
+    --bold-5: 700; 
+    --bold-6: 800; 
+    --bold-7: 900; 
+
+    /* border colors */
+    --border-color: #e2e2e2c6;
+}
+
+body{
+    background-color: var(--sec-bg-color);
+    color: var(--color-2);
+    font-family: var(--quicksands);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color-2);
+    font-family: var(--quicksands);
+}
+li{
+    list-style: none;
+}
+/* ========== FOOTER ========== */
+.footer-container {
+    background-color: var(--sec-bg-color);
+}
+.footer-container .svg-seperator-footer {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    /* margin-top: 3rem; */
+}
+.footer-container .svg-seperator-footer .custom-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.footer-container .svg-seperator-footer .custom-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+}
+.footer-container .svg-seperator-footer .custom-shape .shape-fill {
+    fill: #464C5A;
+}
+.footer-section{
+    padding: 4rem 4rem 2rem 4rem;
+    background-color: var(--color-1);
+}
+.footer-section .icon-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.icon-section img{
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+}
+.icon-section h4{
+    font-size: 24px;
+    color: var(--main-bg-color);
+}
+.footer-section .opt-section,
+.footer-section .sub-opt-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 24px;
+}
+.footer-section .opt-section .opt,
+.footer-section .sub-opt-section .sub-opt{
+    font-size: 16px;
+    color: var(--main-bg-color);
+    font-weight: var(--bold-2);
+}
+.footer-section .opt-section .opt:hover,
+.footer-section .sub-opt-section .sub-opt:hover{
+    font-weight: var(--bold-4);
+}
+.footer-section .line-container {
+    display: flex;
+    margin: 2rem 0;
+}
+.footer-section .line-container .line {
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    opacity: 50%;
+}
+.footer-section .footer-copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-copyright .copyright{
+    color: var(--main-bg-color);
+    font-weight: var(--bold-2);
+}
+.footer-copyright .design{
+    color: var(--main-bg-color);
+    font-weight: var(--bold-1);
+}
+.design .linked{
+    color: var(--main-bg-color);
+    font-weight: var(--bold-2);
+}
+.design .linked:hover{
+    font-weight: var(--bold-3);
+}
+.footer-section .arrow-up-section{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.arrow-up-section .icon{
+    position: fixed;
+    text-align: center;
+    align-content: center;
+    bottom: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--main-bg-color);
+    padding: 16px;
+    border-radius: 8px 8px 0 0;
+}
+.icon-active{
+    top: 95%;
+}
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .footer-container .svg-seperator-footer .custom-shape svg {
+        width: calc(100% + 1.3px);
+        height: 42px;
+    }
+}
+@media (max-width: 820px) {
+    .footer-section .footer-copyright{
+        flex-direction: column-reverse;
+        gap: 4px;
+    }
+    .footer-section .arrow-up-section{
+        margin-top: 10px;
+    }
+}
+@media screen {
+    .footer-section{
+        padding: 2rem;
+    }
+}
+@media (max-width: 540px) {
+    .footer-section .opt-section,
+    .footer-section .sub-opt-section{
+        flex-wrap: wrap;
+        margin-top: 24px;
+        line-height: 0.6;
+        gap: 18px;
+    }
+    .footer-copyright .design{
+        font-size: 14px;
+        font-weight: var(--bold-3);
+    }
+    .footer-copyright .copyright{
+        font-size: 14px;
+        font-weight: var(--bold-3);
+    }
+    .footer-section .arrow-up-section{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 420px) {
+    .footer-section{
+        padding: 1rem;
+    }
+    .footer-container .svg-seperator-footer .custom-shape svg {
+        height: 28px;
+    }
+    .footer-section{
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .icon-section img{
+        max-width: 40px;
+    }
+    .icon-section h4{
+        font-size: 18px;
+    }
+    .footer-section .opt-section,
+    .footer-section .sub-opt-section{
+        flex-wrap: wrap;
+        margin-top: 18px;
+        line-height: 0.6;
+        gap: 18px;
+    }
+    .footer-section .opt-section .opt,
+    .footer-section .sub-opt-section .sub-opt{
+        font-size: 12px;
+        font-weight: var(--bold-2);
+    }
+    .footer-section .line-container {
+        margin: 1.2rem 0;
+    }
+    .footer-section .line-container .line {
+        height: 2px;
+    }
+    .footer-copyright .copyright{
+        font-size: 10px;
+        font-weight: var(--bold-3);
+    }
+    .footer-copyright .design{
+        font-size: 10px;
+        font-weight: var(--bold-1);
+    }
+    .footer-section .arrow-up-section{
+        margin-top: 10px;
+    }
+}

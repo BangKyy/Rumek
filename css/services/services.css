@@ -1,0 +1,70 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: var(--quicksands); */
+    font-optical-sizing: auto;
+}
+
+/* VARIABLE */
+:root{
+    /* background colors */
+    --main-bg-color: #eaeaea;
+    --sec-bg-color: #FAFCFF;
+    --bg-dropdown: #F4FAFF; /*#f2f2f8*/
+
+    /* fonts family */
+    --poppins: "Poppins", sans-serif;
+    --quicksands: "Quicksand", sans-serif;
+
+    /* font colors */
+    --color-1: #464C5A;
+    --color-2: #303030;
+    --color-3: #404756;
+    --color-4: #D9D9D9;
+    --color-5: #FCFCFC;
+    --color-6: #BABABA;
+    --color-7: #DEDEDE;
+    --color-8: #636363;
+    --color-9: #235699;
+
+    --color-gradient-black-left-side: hsla(222, 13%, 31%, 1);
+    --color-gradient-black-2: rgba(0, 0, 0, 0.6);
+    --color-gradient-black-3: rgba(0, 0, 0, 0.4);
+    --color-gradient-black-4: rgba(0, 0, 0, 0.2);
+
+    --color-gradient-white-1: rgba(255, 255, 255, 0.9);
+    --color-gradient-white-2: rgba(255, 255, 255, 0.8);
+
+    /* fonts bold */
+    --bold-1: 300;
+    --bold-2: 400;
+    --bold-3: 500;
+    --bold-4: 600; 
+    --bold-5: 700; 
+    --bold-6: 800; 
+    --bold-7: 900; 
+
+    /* border colors */
+    --border-color: #e2e2e2c6;
+}
+
+body{
+    background-color: var(--sec-bg-color);
+    color: var(--color-2);
+    font-family: var(--quicksands);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color-2);
+    font-family: var(--quicksands);
+}
+li{
+    list-style: none;
+}
