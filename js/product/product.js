@@ -1,10 +1,9 @@
-const dropdownActivated = () => {
-    const lengDropdown = document.querySelector(".inp-lang");
+const languageDropdownActivated = () => {
+    const langDropdown = document.querySelector(".inp-lang");
     const dropdown = document.querySelector(".dropdown-lang");
     
-    lengDropdown.addEventListener('click', () => {
+    langDropdown.addEventListener('click', () => {
         dropdown.classList.toggle("dropdown-lang-active");
-        console.log(1)
     });
 }
 
@@ -15,22 +14,37 @@ const navbarActivated = () => {
     btnToggle.addEventListener('click', () => {
         navPopup.classList.toggle("opt-container");
         btnToggle.classList.toggle("move");
-        console.log(1)
     });
 }
+const brandDropdownActivated = () => {
+    const dropdowns = document.querySelectorAll(".brand-search-value");
+    const boxDropdown = document.querySelectorAll(".box-dropdown");
+    const selected = document.querySelectorAll(".selected");
+    const value = document.querySelectorAll(".value");
+    // const options = document.querySelectorAll(".dropdown-item");
 
-const brandSlides = () => {
-    window.addEventListener("resize", () => {
-        if(window.innerWidth <= 780) {
-            const copy = document.querySelector(".brands-slide").cloneNode(true);
-            document.querySelector(".brands-group").appendChild(copy);
-        }
+    dropdowns.forEach((dropdown, i) => {
+        dropdown.addEventListener('click', () => {
+            boxDropdown[i].classList.toggle("dropdown-actived");
+            window.addEventListener("scroll",() => {
+                boxDropdown.forEach(box => {
+                    box.classList.remove("dropdown-actived");
+                });
+            });            
+        });
+    })
+
+    value.forEach((val, i) => {
+        const options = document.querySelectorAll(".dropdown-item-" + (i + 1));
+        options.forEach((option) => {
+        option.addEventListener("click", () => {
+                selected[i].innerHTML = option.innerHTML;
+                // boxDropdown[i].classList.remove("dropdown-actived");
+            });
+        })
     })
 }
 
-
-
-
-dropdownActivated();
+languageDropdownActivated();
 navbarActivated();
-// brandSlides();
+brandDropdownActivated();

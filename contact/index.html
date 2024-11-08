@@ -32,6 +32,10 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- GOOGLE ICONS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- PHOSPOR ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- NOTIFLIX -->
+    <link href="https://cdn.jsdelivr.net/npm/notiflix@3.2.7/src/notiflix.min.css" rel="stylesheet">
 
     <title>Contact - Rumah Mesin Kreatif</title>
 
@@ -146,32 +150,65 @@
             </div>
         </div>
     </nav>
-    <div class="main-container">
-        <div class="content">
-            <h4 class="title">Oops!! Maaf</h4>
-            <p>Maaf halaman ini masih dalam proses pengembangan. Halaman akan tersedia dalam hitungan mundur di bawah ini.</p>
-            <div class="count-down">
-                <div class="box">
-                    <h3 id="day">00</h3>
-                    <span>day</span>
-                </div>
-                <div class="box">
-                    <h3 id="hour">00</h3>
-                    <span>hour</span>
-                </div>
-                <div class="box">
-                    <h3 id="minute">00</h3>
-                    <span>minute</span>
-                </div>
-                <div class="box">
-                    <h3 id="second">00</h3>
-                    <span>second</span>
+    <div class="contact-container">
+        <div class="contact-section">
+            <div class="image-container">
+                <h1>Percayakan Kebutuhan Anda pada Kami - Mari Mulai Pembicaraan!</h1>
+            </div>
+        </div>
+        <div class="main-contact-container">
+            <div class="main-contact-section">
+                <form action="" class="form-container">
+                    <input type="text" class="name" placeholder="Nama">
+                    <input type="email" class="email" placeholder="Alamat Email">
+                    <input type="tel" class="phone" placeholder="Nomor Telepon">
+                    <textarea class="message" rows="4" placeholder="Apa yang bisa kami bantu?"></textarea>
+                    <button class="btnsubmit" type="submit">Kirim Pesan</button>
+                </form>
+                <div class="side-contact-section">
+                    <div class="box-container email">
+                        <div class="box-icon">
+                            <i class="ph-fill ph-envelope"></i>
+                        </div>
+                        <div class="box-text">
+                            <h4 class="title">Email Official</h4>
+                            <h4 class="subtitle">rumekindo@gmail.com <br> rumahmesinkreatif@yahoo.com</h4>
+                        </div>
+                    </div>
+                    <div class="box-container phone">
+                        <div class="box-icon">
+                            <i class="ph-fill ph-device-mobile"></i>
+                        </div>
+                        <div class="box-text">
+                            <h4 class="title">Telepon Official</h4>
+                            <h4 class="subtitle">+62 82150177878</h4>
+                        </div>
+                    </div>
+                    <div class="box-container time">
+                        <div class="box-icon">
+                            <i class="ph-fill ph-clock"></i>
+                        </div>
+                        <div class="box-text">
+                            <h4 class="title">Jam Operasional</h4>
+                            <h4 class="subtitle">08.00 WIB - 22.00 WIB</h4>
+                        </div>
+                    </div>
+                    <div class="box-container Address">
+                        <div class="box-icon">
+                            <i class="ph-fill ph-map-pin-area"></i>
+                        </div>
+                        <div class="box-text">
+                            <h4 class="title">Alamat Kantor</h4>
+                            <h4 class="subtitle">NEO SOHO Residence Tower Neo Soho Unit Avenue 26/29 Tanjung Duren Selatan Grogol Pertamburan, Jakarta Barat, Indonesia, 11470</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="/" class="btn">beranda</a>
         </div>
-        <div class="image">
-            <img src="/images/Create.gif" alt="">
+        <div class="map-realtime-section">
+            <div class="map-box">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6696434832534!2d106.78743847503738!3d-6.174962993812431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65ee1c07a31%3A0x2c4c67f4d94e8e65!2sNEO%20SOHO%20Mall!5e0!3m2!1sid!2sid!4v1730985625451!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
     <footer class="footer-container">
@@ -216,5 +253,9 @@
     </footer>
     <script src="/js/contact/contact.js"></script>
     <script src="/js/partials/countdown.js"></script>
+    <!-- SMTP JS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- NOTIFLIX -->
+    <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.7/dist/notiflix-aio-3.2.7.min.js"></script>
 </body>
 </html>
